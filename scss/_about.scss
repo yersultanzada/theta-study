@@ -1,0 +1,128 @@
+section#about, section#author{
+  position: relative;
+  img {
+    width: 100%;
+  }
+}
+section#about {
+  .bg_left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    background: url("../img/about/back_left.png") center center no-repeat;
+    width: 244px;
+    height: 797px;
+  }
+  .bg_right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -10;
+    background: url("../img/about/back_right.png") center center no-repeat;
+    width: 262px;
+    height: 790px;
+  }
+}
+section#author{
+  padding-top: 0;
+  .owl-dots {
+    display: block !important;
+    margin-top: 15px;
+    .owl-dot {
+      span {
+        background: $blue-100;
+      }
+      &.active {
+        span {
+          background: $orange;
+          width: 13px;
+          height: 13px;
+          margin: 4px 7px;
+        }
+      }
+    }
+  }
+  .col {
+    padding-left: 0;
+    padding-right: 1px;
+  }
+  .main-info {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    h2 {
+      margin-bottom: 15px;
+    }
+    span {
+      padding-bottom: 3px;
+      border-bottom: 2px solid $orange;
+    }
+    .author-img {
+      position: relative;
+      img:first-child {
+        border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+        box-shadow: 20px 20px $blue-100;
+      }
+      &--bg {
+        width: 170px;
+        position: absolute;
+        left: -70px;
+        top: -70px;
+        z-index: -2;
+      }
+      &--ellipse {
+        position: absolute;
+        bottom: 0;
+        right: -50px;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        background-color: $blue;
+        box-shadow: 0 18px 17px rgba(38,37,37,.5);
+        -moz-box-shadow: 0 18px 17px rgba(38,37,37,.5);
+        -webkit-box-shadow: 0 18px 17px rgba(38,37,37,.5);
+        border-bottom: none;
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  section#about {
+    .bg_right {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  section#author {
+    .col {
+      flex-basis: auto;
+      max-width: 50%;
+      img {
+        padding-bottom: 1px;
+      }
+    }
+    .main-info {
+      img {
+        max-width: 350px;
+      }
+      .author-img--ellipse {
+        right: 0 !important;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 991px){
+  section#about {
+    picture {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      img {
+        width: 510px;
+        left: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+section#problems {
+  background-color: $blue-100;
+  .block-img {
+    text-align: center;
+  }
+}
+section#result, section.callToAction {
+  position: relative;
+  background-color: #231c4b;
+  /*background-color: #11344b;*/
+  .row {
+    position: relative;
+    z-index: 10;
+  }
+  .block-img {
+    text-align: center;
+  }
+  form {
+    .form-row {
+      display: block;
+      .form-control {
+        height: calc(2.25rem + 7px);
+        margin-bottom: 10px;
+        border-radius: 25px;
+        font-size: 0.85rem;
+        color: $blue;
+      }
+      .btn {
+        background: linear-gradient(45deg, #df7165 33%, #f9e377 66%, $orange);
+        color: $blue;
+        font-weight: 500;
+        &:hover {
+          background: linear-gradient(45deg, #f9e377 33%, #df7165 66%);
+        }
+      }
+    }
+  }
+}
+section#result {
+  .bg_1_left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../img/result/back_1_left.png") no-repeat;
+    width: 328px;
+    height: 600px;
+  }
+  .bg_1_right {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    background: url("../img/result/back_1_right.png") no-repeat;
+    width: 248px;
+    height: 600px;
+  }
+}
+section.callToAction {
+  .bg_3_left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../img/calltoaction/back_3_left.png") no-repeat;
+    width: 324px;
+    height: 389px;
+  }
+  .bg_3_right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../img/calltoaction/back_3_right.png") no-repeat;
+    width: 283px;
+    height: 389px;
+  }
+}
+@media (max-width: 991px) {
+  section#result {
+    .bg_1_left {
+      top: 50%;
+      transform: translateY(-50%);
+      background: url("../img/result/back_1_left.png") center center no-repeat;
+      width: 200px;
+      height: 640px;
+    }
+    .bg_1_right {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 200px;
+      height: 640px;
+    }
+  }
+}
+@media(min-width: 768px) {
+  section#result, section.callToAction {
+    form {
+      .form-row {
+        display: flex;
+        .form-control {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

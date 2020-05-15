@@ -1,0 +1,41 @@
+section#faq {
+  background-color: $blue-100;
+  .accordion {
+    .card {
+      background-color: transparent;
+      border: none;
+      margin-bottom: 10px;
+      .card-header {
+        position: relative;
+        background: linear-gradient(45deg, #df7165 33%, #f9e377 66%, $orange);
+        border-radius: 25px;
+        border-bottom: none;
+        button {
+          font-size: 1rem;
+          width: 93%;
+          text-align: left;
+          color: $blue;
+          text-decoration: none;
+          padding: 0;
+          vertical-align: top;
+          white-space: normal;
+          i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 1.25rem;
+            color: $blue;
+          }
+        }
+        button[aria-expanded=true] i:before {
+          content: "\f077";
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px){
+  section#faq .accordion .card-body {
+    font-size: 14px;
+  }
+}

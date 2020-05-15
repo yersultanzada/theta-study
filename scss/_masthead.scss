@@ -1,0 +1,50 @@
+// Styling for the masthead
+section#masthead {
+  position: relative;
+  .wt-background-headerImg {
+    background: url(../img/main-bg.jpg) no-repeat 50% 50% / cover , #3c506f;
+  }
+  .block-intro {
+    position: relative;
+    padding-top: 25px;
+    .intro-img {
+      text-align: center;
+      img {
+        width: 370px;
+      }
+    }
+    .main-arrow {
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      transform: translate(-50%);
+      width: 50px;
+    }
+  }
+}
+@media (max-width: 390px) {
+  section#masthead{
+    .intro-img {
+      img {
+        width: 100% !important;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  section#masthead .wt-section-heroTitle {
+    font-size: 40px;
+  }
+}
+@media (min-width: 992px) {
+  section#masthead{
+    .block-intro {
+      padding-top: 100px;
+    }
+    .intro-img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

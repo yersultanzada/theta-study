@@ -1,0 +1,38 @@
+#contacts {
+  position: relative;
+  background-color: $white;
+  a {
+    text-decoration: none;
+    img {
+      vertical-align: top;
+    }
+  }
+  .block-follow {
+    ul {
+      li {
+        text-align: center;
+        a{
+          display: block;
+          background-color: $blue;
+          border-radius: 8px;
+          width: 35px;
+          height: 35px;
+          line-height: 35px;
+          color: #fff;
+          &:hover {
+            background: linear-gradient(45deg, #df7165 33%, #f9e377 66%, $orange);
+          }
+          i {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  #contacts .m-auto a {
+    display: block;
+    margin-right: 0 !important;
+  }
+}
